@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar/NavBar";
-import About from "./About/About";
+import Contact from "./Contact/Contact";
 import DataList from "./Datalist/DataList";
+import DataDetails from "./Datalist/DataDetails";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -11,8 +12,6 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     padding: 0;
     font-family: 'Kanit', sans-serif;
-    background: black;
-    color: white;
     
   }
 `;
@@ -26,7 +25,8 @@ function App() {
         <NavBar />
         <Switch>
           <Route path="/" exact component={DataList} />
-          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/:char_id" component={DataDetails} />
         </Switch>
       </Router>
     </div>

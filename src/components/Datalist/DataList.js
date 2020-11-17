@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Wrapper } from "./DataStyles";
+import {Link} from 'react-router-dom'
+
+const Navl = {
+    textDecoration: "none",
+    outline: "none",
+  };
 
 function DataList() {
-  const [data, setData] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     loadData();
@@ -13,22 +19,20 @@ function DataList() {
     const response = await axios.get(
       "https://breakingbadapi.com/api/characters"
     );
-    const data = response.data;
-    setData(data);
-    console.log(data);
+    const items = response.data;
+    setItems(items);
   };
   return (
-    <Wrapper className="characters">
-      {data.map((character, id) => {
+   <Wrapper className="characters">
+      {items.map((character) => {
         return (
-          <div className="characterList" key={id}>
+            <Link style={Navl} to={`/${character.char_id}`}><div key={character.char_id} className="characterList">
             <img src={character.img} alt={character.name} />
             <div className="texts">
-            <h4>{character.name}</h4>
+            <h3>{character.name}</h3>
             <p>{character.portrayed}</p>
-            <p>{character.nickname}</p>
           </div>
-          </div>
+          </div></Link>
         );
       })}
     </Wrapper>
@@ -36,15 +40,3 @@ function DataList() {
 }
 
 export default DataList;
-
-{/* <div class="articles">
-
-<div class="articles__list">
-    <img src="images/image-currency.jpg" alt="currency">
-    <div class="texts">
-      <h6>By Claire Robinson</h6> 
-      <p class="big">Receive money in any currency with no fees</p>
-      <p class="small">The world is getting smaller and we’re becoming more mobile. So why should you be 
-        forced to only receive money in a single …</p> 
-    </div>
-  </div> */}

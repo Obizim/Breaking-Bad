@@ -11,15 +11,12 @@ function NavBar() {
   return (
     <div>
       <Header>
-        <p>Breaking Bad</p>
+        <p>BREAKINGBAD</p>
         <Navul>
           <Link style={Navl} to="/">
             <NavLinks>Home</NavLinks>
           </Link>
-          <Link style={Navl} to="/about">
-            <NavLinks>About</NavLinks>
-          </Link>
-          <Link style={Navl} to="about ">
+          <Link style={Navl} to="/contact">
             <NavLinks>Contact</NavLinks>
           </Link>
         </Navul>
