@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Header, Navul, NavLinks } from "./NavStyle";
 
 const Navl = {
-  color: "darkOrange",
   textDecoration: "none",
   outline: "none",
 };

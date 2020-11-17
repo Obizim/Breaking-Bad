@@ -4,8 +4,8 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .8rem 3rem;
-  box-shadow: 0 -1px 3px rgba(0,0,0,2)
+  padding: 1rem 3rem;
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.1);
 `;
 
 export const Navul = styled.ul`
@@ -16,5 +16,5 @@ export const Navul = styled.ul`
 export const NavLinks = styled.li`
     margin: 15px;
     font-size: 1rem;
-    color: blue;
+    color: #d8d8d8;
 `

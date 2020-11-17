@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     padding: 0;
     font-family: 'Kanit', sans-serif;
+    background: black;
+    color: white;
     
   }
 `;
@@ -23,7 +25,7 @@ function App() {
         <GlobalStyle />
         <NavBar />
         <Switch>
-        <Route path="/" exact component={DataList} />
+          <Route path="/" exact component={DataList} />
           <Route path="/about" component={About} />
         </Switch>
       </Router>
