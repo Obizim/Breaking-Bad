@@ -1,36 +1,28 @@
 import React from "react";
-
-const contact = {
-  fontSize: "18px",
-  color: "grey",
-  textAlign: "center",
-  padding: "10rem 1rem",
-};
+import { ContactPage } from "./../NavBar/NavStyle";
 
 function About() {
   return (
-    <div style={contact}>
+    <ContactPage>
       <p>
-        Ummmm, this is my first React App. Trying to know if it will finally
-        stick to my head
+        Urrmmmm, this is my first React App. Started learning it recently though
+        👌👌
       </p>
       <p>
         As you can see this contact page displays these dummy texts. Just added
         it so I can learn the React Router kini well(Dynamic Routing inclusive)
+        ✌🤞
       </p>
       <p>
-        I used Styled components for the styling though I did a little bit of
-        inline too.
-      </p>
-      <p>
-        The code won't obviously be clean cause this even took me time. I'm just
-        happy I finally concluded it. Hoping to get better by day
+        I used Styled components for the styling. It's almost the same with CSS.
+        🤦‍♂️🤦‍♂️
       </p>
       <p>
         I almost forgot to say I also used HOOKS(useState, useEffect) I think
-        they are so much btter than class components
+        they are so much better than class components. Feels so nice to run away
+        from 'this' keyword 😜😜
       </p>
-    </div>
+    </ContactPage>
   );
 }
 

@@ -2,21 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Header, Navul, NavLinks } from "./NavStyle";
 
-const Navl = {
-  textDecoration: "none",
-  outline: "none",
-};
 
 function NavBar() {
   return (
     <div>
       <Header>
-        <p>BREAKINGBAD</p>
+        <p>BBCasts</p>
         <Navul>
-          <Link style={Navl} to="/">
+          <Link className="link"  to="/">
             <NavLinks>Home</NavLinks>
           </Link>
-          <Link style={Navl} to="/contact">
+          <Link className="link" to="/contact">
             <NavLinks>Contact</NavLinks>
           </Link>
         </Navul>
