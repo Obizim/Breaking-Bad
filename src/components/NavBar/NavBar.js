@@ -7,7 +7,7 @@ function NavBar() {
   return (
     <div>
       <Header>
-        <p>BBCasts</p>
+        <p>BbCasts</p>
         <Navul>
           <Link className="link"  to="/">
             <NavLinks>Home</NavLinks>
